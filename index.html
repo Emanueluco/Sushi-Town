@@ -1,0 +1,162 @@
+<!--
+Project: Sushi Town - Static responsive HTML + CSS
+Files included in this document:
+  1) index.html
+  2) styles.css
+
+Instructions:
+  - Copy the contents between the markers for each file into two files:
+      - index.html
+      - styles.css
+  - Keep both files in the same folder and open index.html in your browser.
+  - Images are loaded from seeded picsum.photos URLs (placeholders). Replace them with your preferred images if desired.
+
+-->
+
+<!-- =====================
+     FILE: index.html
+     ===================== -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sushi Town</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <img src="https://picsum.photos/seed/logo/80/80" alt="Sushi Town logo" class="logo">
+        <div class="brand-text">
+          <h1>Sushi Town</h1>
+          <p class="tag">Sabor tradicional · Entrega rápida</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#visitanos">Visítanos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <h2 class="hero-title">¡Nueva sucursal en tu ciudad!</h2>
+        <p class="hero-desc">Ven a conocer nuestra nueva sucursal y disfruta 2x1 en rollos seleccionados durante la primera semana.</p>
+        <a class="btn-primary" href="#visitanos">Ver sucursal</a>
+      </div>
+      <div class="hero-media">
+        <img src="https://picsum.photos/seed/store/1200/800" alt="Nueva sucursal Sushi Town">
+      </div>
+    </section>
+
+    <section class="content-grid">
+      <aside class="sidebar">
+        <div class="card categories">
+          <h3 class="handwritten">Categorías</h3>
+          <ul>
+            <li>Sushi y Rollos</li>
+            <li>Bebidas</li>
+            <li>Postres</li>
+            <li>Promociones</li>
+          </ul>
+        </div>
+
+        <div class="card visitanos" id="visitanos">
+          <h3 class="handwritten">Visítanos</h3>
+          <p>Av. Principal 123, Centro<br>Horario: 12:00 - 22:30</p>
+          <img src="https://picsum.photos/seed/location/600/300" alt="Sucursal" class="branch-img">
+        </div>
+      </aside>
+
+      <section class="products" id="productos">
+        <h2 class="section-title">Productos destacados</h2>
+        <div class="products-grid">
+          <!-- product 1 -->
+          <article class="product-card">
+            <img src="https://picsum.photos/seed/sushi/800/600" alt="Rollo Sushi" class="product-img">
+            <div class="product-info">
+              <h4 class="product-name">California Roll</h4>
+              <p class="product-desc">Rollo clásico con aguacate, cangrejo y pepino.</p>
+              <div class="price-row">
+                <span class="price-mxn">$150 MXN</span>
+                <span class="price-usd">(USD $7.50)</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- product 2 -->
+          <article class="product-card">
+            <img src="https://picsum.photos/seed/drink/800/600" alt="Bebida" class="product-img">
+            <div class="product-info">
+              <h4 class="product-name">Té Helado</h4>
+              <p class="product-desc">Refrescante té helado casero con limón.</p>
+              <div class="price-row">
+                <span class="price-mxn">$45 MXN</span>
+                <span class="price-usd">(USD $2.20)</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- product 3 -->
+          <article class="product-card">
+            <img src="https://picsum.photos/seed/mochi/800/600" alt="Mochi" class="product-img">
+            <div class="product-info">
+              <h4 class="product-name">Mochi de Matcha</h4>
+              <p class="product-desc">Suave y tradicional mochi con un toque de matcha.</p>
+              <div class="price-row">
+                <span class="price-mxn">$60 MXN</span>
+                <span class="price-usd">(USD $3.00)</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- product 4 -->
+          <article class="product-card">
+            <img src="https://picsum.photos/seed/roll2/800/600" alt="Rollo Especial" class="product-img">
+            <div class="product-info">
+              <h4 class="product-name">Sushi Especial</h4>
+              <p class="product-desc">Rollo premium con ingredientes seleccionados.</p>
+              <div class="price-row">
+                <span class="price-mxn">$220 MXN</span>
+                <span class="price-usd">(USD $11.00)</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="contacto">
+    <div class="container footer-inner">
+      <p>&copy; 2025 Sushi Town — Hecho con amor por Sushi Town</p>
+      <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple menu toggle for small screens
+    const btn = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.main-nav');
+    btn.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
